@@ -57,7 +57,7 @@
                width: 100%;
                align-content: center;
                gap: 40px 0px;
-               height: 80vh;
+               height: 120vh;
         }
    }
    @media only screen and (min-width: 501px) and (max-width: 1023px) {
