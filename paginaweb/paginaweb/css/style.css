@@ -1,0 +1,18 @@
+@import url(nav.css);
+@import url(seccion01.css);
+@import url(seccion02.css);
+@import url(seccion03.css);
+@import url(seccion04.css);
+@import url(seccion05.css);
+@import url(seccion06.css);
+@import url(seccion07.css);
+@import url(seccion08.css);
+@import url(seccion09.css);
+@import url(parrallax.css);
+@import url(footer.css);
+@import url(boton.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

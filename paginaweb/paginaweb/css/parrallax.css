@@ -1,0 +1,45 @@
+.parrallax{
+    background: rgb(0, 0, 0,0.2) fixed no-repeat 50% 50%;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0px 10px;
+   }
+   .contenedor_6_1 b{
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-family: 'Vina Sans', sans-serif;
+   -webkit-text-stroke: 2px black;
+   }
+   .contenedor_6_1 p{
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    font-family: 'Bebas Neue', sans-serif;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    border-top: 2px double rgb(0, 0, 0);
+   }
+   #seccion2{
+  
+    background-image: url(../img/parallax.jpeg);
+   }
+   @media only screen and (max-width: 500px) {
+  
+    .parrallax{
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px 0;
+    }
+    .contenedor_6_1 b{
+    
+        font-size: 1.5rem;
+       }
+       .contenedor_6_1 p{
+        
+        font-size: 1.5rem;
+       }
+   }

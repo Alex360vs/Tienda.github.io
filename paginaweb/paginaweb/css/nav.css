@@ -1,0 +1,306 @@
+.nav {
+      -webkit-backdrop-filter: hue-rotate(180deg) invert() blur(15px);
+        backdrop-filter: hue-rotate(180deg) invert() blur(15px);
+       background-color: rgba(185, 95, 155,.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    height: 65px;
+    line-height: 65px;
+  }
+  .nav_wrapper_logo_img{
+    position: relative;
+    top: 12px;
+  }
+  .nav .nav_wrapper {
+    position: relative;
+    max-width: 1250px;
+    padding: 0 30px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  
+    align-items: center;
+  }
+  
+  .nav_wrapper .nav_links {
+    display: flex;
+    gap: 0 20px;
+  }
+  
+  .nav_wrapper .nav_wrapper_logo a,
+  .nav_links li a {
+    color: #E7F2D5;
+    text-decoration: none;
+  }
+  .nav_wrapper .nav_wrapper_logo a {
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .nav_links li a {
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 5px;
+    padding: 6px 10px;
+    transition: all 0.1s ease;
+    font-family: 'Bebas Neue', sans-serif;
+  
+  }
+  
+  .nav_links li {
+    list-style-type: none;
+  }
+  .nav_links li a:hover {
+    background: #fff;
+    color: #000000;
+  }
+  .nav_links .mobile_item {
+    display: none;
+  }
+  
+  /**********************************
+              Drop Down Menu             
+  *********************************** */
+  
+  .nav_links .nav_links_drop {
+    position: absolute;
+    top: 65px;
+    width: 180px;
+    line-height: 45px;
+    background-color: #9b4e9a;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s ease-in-out;
+  }
+  .nav_links li:hover .nav_links_drop,
+  .nav_links li:hover .mega_box {
+    top: 65px;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .drop li a {
+    width: 100%;
+    display: block;
+    padding: 0 0 0 15px;
+    font-weight: 400;
+    border-radius: 0px;
+    font-family: 'Bebas Neue', sans-serif;
+  
+  }
+  
+  /**********************************
+                Mega Menu             
+  *********************************** */
+  
+  .mega_box {
+    position: absolute;
+    top: 85px;
+    left: 0;
+    width: 100%;
+    padding: 0 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.1s ease;
+  }
+  
+  .mega_box .content {
+    background-color: #9b4e9a;
+    padding: 25px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .content .row {
+    width: calc(25% - 30px);
+    line-height: 45px;
+  }
+  
+  .content .row header {
+    color: #fff;
+    font-weight: 800;
+    font-size: 20px;
+  }
+  
+  .content .row .services_img {
+    background-image: url(../img/LOGOTIPO03.png);
+    background-color: #9b4e9a;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+  
+  .content .row .mega_links {
+    margin-left: -40px;
+    border-left: 1px solid rgba(255, 255, 255, 0.09);
+  }
+  .content .row .first_links {
+    border-left: 0px;
+  }
+  
+  .row .mega_links li {
+    padding: 0 20px;
+  }
+  .row .mega_links li a {
+    padding: 0 20px;
+    color: #d9d9d9;
+    font-size: 17px;
+    line-height: 45px;
+    display: block;
+  }
+  
+  /* buttons style */
+  
+  .nav_wrapper .btn {
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+  }
+  .nav_wrapper .btn.cancel_btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+  }
+  
+  /**********************************
+            Responsive Styles             
+  *********************************** */
+  
+  @media screen and (max-width: 970px) {
+    .nav_wrapper .btn {
+      display: block;
+    }
+    .nav_wrapper .nav_links {
+      position: fixed;
+      height: 100vh;
+      width: 100%;
+      max-width: 350px;
+      background: rgba(156, 79, 154,0.7);
+      display: block;
+      top: 0;
+      left: 0;
+      left: -100%;
+      overflow-y: auto;
+      line-height: 50px;
+      padding: 50px 10px;
+      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.15);
+      transition: all 0.2s ease-in-out;
+    }
+    #menu_btn:checked ~ .nav_links {
+      left: 0%;
+    }
+    #menu_btn:checked ~ .btn.menu_btn {
+      display: none;
+    }
+    .nav_links::-webkit-scrollbar {
+      width: 0px;
+    }
+    .nav_links li {
+      margin: 15px 10px;
+    }
+    .nav_links li a {
+      padding: 0 20px;
+      display: block;
+      font-size: 30px;
+    }
+  
+    /* drop down responsive */
+  
+    .nav_links .nav_links_drop {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      top: 65px;
+      padding-left: 20px;
+      width: 100%;
+      max-height: 0px;
+      overflow: hidden;
+    }
+  
+    #showDrop:checked ~ .nav_links_drop {
+      max-height: 100%;
+    }
+    .nav_links .nav_links_drop li {
+      margin: 0;
+    }
+    .nav_links .nav_links_drop li a {
+      font-size: 18px;
+      border-radius: 5px;
+    }
+    .nav_links .desktop_item {
+      display: none;
+    }
+    .nav_links .mobile_item {
+      display: block;
+      font-size: 20px;
+      font-family: 'Bebas Neue', sans-serif;
+  
+      color: #f2f2f2;
+      font-weight: 500;
+      padding-left: 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: all 0.1s ease;
+    }
+    .nav_links .mobile_item:hover {
+      background: #002e47;
+    }
+  
+    /* Mega menu responsive */
+  
+    .mega_box {
+      position: static;
+      top: 65px;
+      width: 100%;
+      padding: 0 20px;
+      opacity: 1;
+      max-height: 0px;
+      visibility: visible;
+      overflow: hidden;
+      transition: all 0.1s ease;
+    }
+  
+    #showMega:checked ~ .mega_box {
+      max-height: 100%;
+    }
+  
+    .mega_box .content {
+      background-color: #002e47;
+      flex-direction: column;
+      padding: 20px 20px 0 20px;
+    }
+    .mega_box .content .row {
+      width: 100%;
+      margin-bottom: 15px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .mega_box .content .row:nth-child(1),
+    .mega_box .content .row:nth-child(2) {
+      border-top: 0px;
+    }
+    .content .row .services_img {
+      height: 200px;
+    }
+    .content .img_row {
+      border-top: none !important;
+    }
+    .content .row .mega_links {
+      border-left: 0px;
+      padding-left: 15px;
+    }
+    .row .mega_links li {
+      margin: 0;
+    }
+    .content .row header {
+      font-size: 18px;
+    }
+  }
+  .nav_wrapper input {
+    display: none;
+  }

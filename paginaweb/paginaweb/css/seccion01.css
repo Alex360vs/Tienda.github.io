@@ -1,0 +1,209 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,400;1,900&display=swap');
+
+.contenedor_1{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: auto;
+ 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    align-content: center;
+   
+ 
+
+ 
+}
+.contenido_1{
+    display: flex;
+    flex-direction: column;
+    gap: 100px 0px;
+    background-color: transparent;
+    height: 50vh;
+    padding: 0px 10px;
+    
+    
+}
+.contenido_1 h1{
+    font-family: 'Montserrat Alternates', sans-serif;
+
+    font-size: 3rem;
+}
+.contenido_1 p{
+    font-family: 'Montserrat Alternates', sans-serif;
+
+    width: 500px;
+    font-size: 1.5rem;
+}
+.contenido_1 a{
+  background-color: #E7F2D5;
+  border: 3px solid white;
+  width: min-content;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+.contenido_1 a:hover{
+    background-color: #25d366;
+    
+  }
+.contenido_1 img{
+    width: 200px;
+    height: 200px;
+    display: none;
+    margin: auto;
+}
+.contenido_2{
+    display: flex;
+    background-color: transparent;
+    justify-content: center;
+    align-content: center;
+    padding: 10px 20px;
+    
+}
+.contenido_2 img{
+border-radius: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+    .contenedor_1{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        justify-items: center;
+        align-content: center;
+        height: 80vh;
+        margin-top: 10px;
+        text-align: center;
+
+       
+    }
+    .contenido_1{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px 0px;
+        height: 70vh;
+
+        
+    }
+    .contenido_1 h1{
+        width: 80%;
+        font-size: 2.5rem;
+        text-align: center;
+        height: auto;
+        margin: auto;
+     
+    }
+    .contenido_1 p{
+        width: auto;
+        height: auto;
+        font-size: 1rem;
+       
+    }
+    .contenido_2 {
+        display: none;
+        }
+        
+    .contenido_2 img{
+       display: none;
+       width: 400px;
+       height: 400px;
+        }
+    .contenido_1 img{
+        width: 200px;
+        height: 200px;
+        display: block;
+        border-radius: 100%;
+        
+        }
+
+  }
+  
+  /* Estilos para tabletas */
+  @media only screen and (min-width: 501px) and (max-width: 1023px) {
+    .contenedor_1{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+        height: 75vh;
+        width: 100%;
+        align-content: center;
+        margin-top: 50px;
+    }
+    .contenido_1{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px 0px;
+        background-color: transparent;
+        height: 60vh;
+        
+    }
+    .contenido_1 h1{
+        font-size: 2.8rem;
+        padding: 10px 15px;
+    }
+    .contenido_1 p{
+   
+        font-size: 1rem;
+        width: auto;
+        min-width: 200px;
+        height: auto;
+        padding: 10px 15px;
+    }
+    .contenido_2{
+        display: flex;
+        align-items: center;
+        height: 50vh;
+    }
+    .contenido_2 img{
+        border-radius: 100%;
+        min-width: 220px;
+        width: 300px;
+        height: 300px;
+        }
+    
+  }
+  
+  /* Estilos para pantallas de escritorio */
+  @media only screen and (min-width: 1024px) {
+
+    .contenedor_1{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    
+        height: 75vh;
+        align-content: center;
+        justify-items: center;
+        width: 100%;
+    }
+    .contenido_1{
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        flex-direction: column;
+        gap: 30px 0px;
+        height: 60vh;
+    }
+    .contenido_1 h1{
+        font-size: 3rem;
+    }
+    .contenido_1 p{
+        width: 500px;
+        font-size: 1.5rem;
+    }
+    .contenido_2 img{
+        
+        width: 400px;
+        height: 400px;
+  }
+  .contenido_2{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    
+}
+}

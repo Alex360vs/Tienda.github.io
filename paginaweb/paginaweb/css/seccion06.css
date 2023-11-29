@@ -1,0 +1,27 @@
+.contenedor_6{
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    
+   }
+   .contenedor_6_1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0px;
+    width: 33%;
+    text-align: center;
+    align-items: center;
+   }
+   @media only screen and (max-width: 500px) {
+    .contenedor_6{
+      
+        flex-direction: column;
+        height: 70vh;
+        gap: 100px 0px;
+        
+       }
+      
+   }
+  
